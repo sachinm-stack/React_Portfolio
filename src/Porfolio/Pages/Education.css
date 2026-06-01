@@ -1,0 +1,100 @@
+.education-timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 50px auto;
+  padding-left: 40px;
+}
+
+.education-timeline::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    var(--primary),
+    var(--secondary)
+  );
+  border-radius: 10px;
+}
+
+.edu-card {
+  position: relative;
+  margin-bottom: 35px;
+  padding: 28px;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.15);
+  transition: all 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: translateX(10px);
+  border-color: rgba(168, 85, 247, 0.5);
+  box-shadow: 0 0 35px rgba(168, 85, 247, 0.3);
+}
+
+.edu-card::before {
+  content: "";
+  position: absolute;
+  left: -38px;
+  top: 30px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 20px var(--primary);
+}
+
+.edu-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.school {
+  color: var(--secondary);
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.year {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(34, 211, 238, 0.1);
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  color: var(--secondary);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.gpa {
+  margin-top: 15px;
+  color: #facc15;
+  font-weight: 700;
+}
+
+.details {
+  margin-top: 15px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .education-timeline {
+    padding-left: 25px;
+  }
+
+  .edu-card::before {
+    left: -24px;
+    width: 14px;
+    height: 14px;
+  }
+}

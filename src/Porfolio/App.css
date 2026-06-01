@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #050816;
+  --card: rgba(15, 23, 42, 0.72);
+  --card-border: rgba(255, 255, 255, 0.12);
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --primary: #a855f7;
+  --secondary: #22d3ee;
+  --pink: #ec4899;
+  --shadow: 0 0 40px rgba(168, 85, 247, 0.18);
+}
+
+/* Light theme variables */
+html[data-theme="light"] {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --card-border: #e2e8f0;
+  --text: #0f172a;
+  --muted: #475569;
+  --primary: #7c3aed;
+  --secondary: #0284c7;
+  --pink: #db2777;
+  --shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+/* Dark theme variables */
+html[data-theme="dark"] {
+  --bg: #050816;
+  --card: rgba(15, 23, 42, 0.72);
+  --card-border: rgba(255, 255, 255, 0.12);
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --primary: #a855f7;
+  --secondary: #22d3ee;
+  --pink: #ec4899;
+  --shadow: 0 0 40px rgba(168, 85, 247, 0.18);
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  overflow-x: hidden;
+  transition: background 0.35s ease, color 0.35s ease;
+}
+
+/* Dark background */
+html[data-theme="dark"] body {
+  background:
+    radial-gradient(circle at top left, rgba(168, 85, 247, 0.28), transparent 35%),
+    radial-gradient(circle at top right, rgba(34, 211, 238, 0.2), transparent 35%),
+    radial-gradient(circle at bottom, rgba(236, 72, 153, 0.12), transparent 35%),
+    var(--bg);
+}
+
+/* Light background */
+html[data-theme="light"] body {
+  background:
+    radial-gradient(circle at top left, rgba(124, 58, 237, 0.12), transparent 35%),
+    radial-gradient(circle at top right, rgba(2, 132, 199, 0.12), transparent 35%),
+    #f8fafc;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  color: var(--text);
+  background: transparent;
+}
+
+/* Common page layout */
+.page {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 95px 24px;
+  min-height: 85vh;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.page-header h1 {
+  font-size: clamp(34px, 5vw, 48px);
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  background: linear-gradient(90deg, var(--text), var(--secondary), var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.page-header p {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 14px 26px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  border: none;
+  transition: 0.25s;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--pink));
+  color: white;
+  box-shadow: 0 0 28px rgba(168, 85, 247, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 42px rgba(168, 85, 247, 0.55);
+}
+
+.btn-secondary {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid var(--card-border);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px);
+  border-color: var(--secondary);
+  box-shadow: 0 0 25px rgba(34, 211, 238, 0.25);
+}
+
+/* Required classes from App.jsx */
+.dark-mode,
+.light-mode {
+  min-height: 100vh;
+  transition: 0.35s ease;
+}
+
+/* Light mode overrides */
+.light-mode .navbar {
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.light-mode .nav-logo,
+.light-mode .menu-icon {
+  color: #0f172a;
+}
+
+.light-mode .nav-link {
+  color: #475569;
+}
+
+.light-mode .nav-link:hover,
+.light-mode .nav-link.active {
+  color: var(--primary);
+  text-shadow: none;
+}
+
+.light-mode .theme-btn {
+  color: #0f172a;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+}
+
+.light-mode .theme-btn.active {
+  color: white;
+}
+
+.light-mode .hero-title,
+.light-mode .page-header h1 {
+  background: linear-gradient(90deg, #0f172a, var(--secondary), var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.light-mode .hero-subtitle,
+.light-mode .school,
+.light-mode .exp-company,
+.light-mode .project-link {
+  color: var(--secondary);
+}
+
+.light-mode .hero-bio,
+.light-mode .page-header p,
+.light-mode .details,
+.light-mode .project-description,
+.light-mode .exp-description,
+.light-mode .year,
+.light-mode .info-card p,
+.light-mode .project-year {
+  color: var(--muted);
+}
+
+.light-mode .profile-image,
+.light-mode .edu-card,
+.light-mode .skill-group,
+.light-mode .skill-chart,
+.light-mode .project-card,
+.light-mode .experience-card,
+.light-mode .contact-info,
+.light-mode .contact-form,
+.light-mode .stat-card,
+.light-mode .tech-stack {
+  background: #ffffff;
+  color: #0f172a;
+  border-color: #e2e8f0;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.light-mode .info-item,
+.light-mode .skill-badge,
+.light-mode .tech-tag,
+.light-mode .tech-list span {
+  background: #eef2ff;
+  color: #3730a3;
+  border-color: #c7d2fe;
+}
+
+.light-mode .contact-form input,
+.light-mode .contact-form textarea {
+  background: #ffffff;
+  color: #0f172a;
+  border-color: #cbd5e1;
+}
+
+.light-mode .contact-form input::placeholder,
+.light-mode .contact-form textarea::placeholder {
+  color: #64748b;
+}
+
+.light-mode .footer {
+  background: rgba(255, 255, 255, 0.9);
+  color: #475569;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Dark mode form */
+.dark-mode .contact-form input,
+.dark-mode .contact-form textarea {
+  color: white;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .page {
+    padding: 65px 18px;
+  }
+}

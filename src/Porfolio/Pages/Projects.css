@@ -1,0 +1,123 @@
+.project-section-title {
+  margin: 40px 0 25px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  color: white;
+}
+
+.working-title {
+  margin-top: 80px;
+  color: var(--secondary);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 26px;
+}
+
+.project-card {
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 35px rgba(168, 85, 247, 0.25);
+}
+
+.working-card {
+  border: 1px solid rgba(34, 211, 238, 0.3);
+}
+
+.working-card:hover {
+  box-shadow: 0 0 35px rgba(34, 211, 238, 0.25);
+}
+
+.project-image {
+  height: 150px;
+  display: grid;
+  place-items: center;
+  font-size: 56px;
+  background: linear-gradient(
+    135deg,
+    rgba(168, 85, 247, 0.2),
+    rgba(34, 211, 238, 0.14)
+  );
+}
+
+.project-content {
+  padding: 26px;
+}
+
+.project-content h3 {
+  font-size: 21px;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.project-description {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.project-tech {
+  margin-top: 18px;
+}
+
+.tech-tag {
+  display: inline-block;
+  padding: 8px 13px;
+  margin: 6px 5px 0 0;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #e0f2fe;
+  background: rgba(34, 211, 238, 0.1);
+  border: 1px solid rgba(34, 211, 238, 0.22);
+  transition: 0.3s;
+}
+
+.tech-tag:hover {
+  transform: translateY(-2px);
+  background: rgba(168, 85, 247, 0.15);
+  border-color: rgba(168, 85, 247, 0.4);
+}
+
+.project-footer {
+  margin-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-year {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.project-link {
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.project-link:hover {
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .project-section-title {
+    font-size: 24px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}

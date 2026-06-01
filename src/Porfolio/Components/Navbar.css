@@ -1,0 +1,145 @@
+.navbar {
+  width: 100%;
+  padding: 18px 60px;
+  background: rgba(5, 8, 22, 0.85);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--card-border);
+}
+
+.nav-container {
+  max-width: 1180px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.logo-icon {
+  color: var(--primary);
+  text-shadow: 0 0 16px var(--primary);
+}
+
+.nav-menu {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: white;
+  text-shadow: 0 0 14px var(--secondary);
+}
+
+.theme-toggle {
+  display: flex;
+  gap: 8px;
+}
+
+.theme-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--card-border);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  cursor: pointer;
+}
+
+.theme-btn.active {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.55);
+}
+
+/* Hamburger button */
+.menu-icon {
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Mobile navbar */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 16px 20px;
+  }
+
+  .nav-container {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .theme-toggle {
+    display: none;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 230px;
+
+    display: none;
+    flex-direction: column;
+    gap: 18px;
+
+    padding: 20px;
+    background: rgba(15, 23, 42, 0.96);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.25);
+
+    z-index: 999;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+  }
+}
+.dark-theme {
+  min-height: 100vh;
+  background: #050816;
+  color: white;
+  transition: 0.4s;
+}
+
+.light-theme {
+  min-height: 100vh;
+  background: #f8fafc;
+  color: #0f172a;
+  transition: 0.4s;
+}
