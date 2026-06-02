@@ -1,18 +1,38 @@
 #Demo Link ::https://sachinportfo.netlify.app/
+# Personal Portfolio Website
 
-# React + Vite
+A modern and responsive personal portfolio website built using React.js to showcase my skills, education, internships, projects, and contact information. The portfolio features a clean user interface, dark/light theme support, mobile-responsive design, project showcases, and an integrated contact form.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
 
-Currently, two official plugins are available:
+* Responsive design for desktop, tablet, and mobile devices
+* Dark and Light mode theme switcher
+* Professional Home, Education, Skills, Projects, Experience, and Contact sections
+* Interactive project showcase with completed and ongoing projects
+* Contact form integration using EmailJS
+* WhatsApp, GitHub, and LinkedIn integration
+* Modern UI with glassmorphism and gradient effects
+* React Router based navigation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technologies Used
 
-## React Compiler
+* React.js
+* React Router DOM
+* JavaScript (ES6+)
+* HTML5
+* CSS3
+* EmailJS
+* Vite
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Sections Included
 
-## Expanding the ESLint configuration
+* Home
+* Education
+* Skills
+* Projects
+* Experience
+* Contact
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Purpose
+
+This portfolio serves as a professional platform to present my technical skills, internships, academic background, and software development projects to recruiters and potential employers.
